@@ -1,0 +1,6 @@
+"startup/startup_stm32f429_439xx.o"
+"src/main.o"
+"src/syscalls.o"
+"src/system_stm32f4xx.o"
+"src/tm_stm32f4_i2c.o"
+"src/tm_stm32f4_stmpe811.o"

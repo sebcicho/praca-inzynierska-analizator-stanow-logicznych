@@ -1,0 +1,3161 @@
+18:27:15 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+18:27:18 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:174:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:147:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:146:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:889:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:1053:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1140:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1190:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1189:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1188:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1187:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1186:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1218:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45696	   2248	  18540	  66484	  103b4	PracaINZallinone.elf
+' '
+18:27:44 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.867095
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.405404s (19.955 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47948 bytes in 0.454802s (102.955 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+18:46:14 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+18:46:15 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+18:46:16 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:174:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:147:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:146:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:889:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:1053:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1140:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1190:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1189:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1188:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1187:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1186:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1218:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45688	   2248	  18540	  66476	  103ac	PracaINZallinone.elf
+' '
+18:46:18 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+18:50:09 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.872131
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.442010s (19.656 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47940 bytes in 0.546001s (85.744 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+18:51:14 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+18:51:14 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+18:51:15 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:174:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:147:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:146:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:889:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:1053:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1140:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1190:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1189:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1188:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1187:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1186:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1218:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45696	   2248	  18540	  66484	  103b4	PracaINZallinone.elf
+' '
+18:51:17 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+18:51:22 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.872131
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.435406s (19.709 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47948 bytes in 0.514801s (90.956 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+18:57:31 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+18:57:32 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+18:57:32 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:174:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:147:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:146:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:889:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:1053:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1140:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1190:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1189:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1188:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1187:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1186:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1218:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45696	   2248	  18540	  66484	  103b4	PracaINZallinone.elf
+' '
+18:57:34 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+19:07:26 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+19:07:27 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+19:07:27 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+make: Nothing to be done for `all'.
+19:07:28 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+19:07:44 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.868498
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.364136s (20.303 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47948 bytes in 0.456026s (102.679 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+19:07:57 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.867095
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.388137s (20.099 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47948 bytes in 0.472027s (99.198 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+19:10:24 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+19:10:25 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+19:10:25 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:174:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:147:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:146:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:889:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:1053:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1140:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1190:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1189:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1188:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1187:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1186:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1218:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45704	   2248	  18540	  66492	  103bc	PracaINZallinone.elf
+' '
+19:10:28 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+19:10:33 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.868498
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.442140s (19.655 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47956 bytes in 0.590033s (79.372 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+19:21:18 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+19:21:19 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+19:21:19 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:174:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:147:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:146:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:889:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:1053:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1140:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1190:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1189:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1188:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1187:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1186:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1218:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45696	   2248	  18540	  66484	  103b4	PracaINZallinone.elf
+' '
+19:21:21 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+19:23:45 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.870451
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.399138s (20.007 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47948 bytes in 0.475027s (98.572 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+19:25:18 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.867095
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.448140s (19.607 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47948 bytes in 0.592034s (79.090 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+21:56:14 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+21:56:14 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+21:56:15 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:175:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:148:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:147:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:895:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:1062:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1149:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1199:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1198:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1197:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1196:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1195:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1227:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45168	   2248	  22636	  70052	  111a4	PracaINZallinone.elf
+' '
+21:56:17 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+21:56:27 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.868498
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.381136s (20.158 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47420 bytes in 0.452026s (102.447 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+22:27:00 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+22:27:01 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+22:27:01 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:175:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:148:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:147:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:897:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:1064:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1151:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1201:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1200:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1199:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1198:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1197:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1229:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45200	   2248	  14444	  61892	   f1c4	PracaINZallinone.elf
+' '
+22:27:04 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+22:27:12 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.875498
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.426138s (19.785 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47452 bytes in 0.527030s (87.926 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+22:35:29 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+22:35:29 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+22:35:30 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:175:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:148:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:147:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:897:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:1064:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1151:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1201:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1200:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1199:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1198:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1197:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1229:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45552	   2248	  14444	  62244	   f324	PracaINZallinone.elf
+' '
+22:35:32 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+22:35:38 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.876905
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.390136s (20.083 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47804 bytes in 0.582033s (80.208 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+22:35:53 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.875498
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.438139s (19.687 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47804 bytes in 0.554032s (84.262 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+22:37:19 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+'Building file: ../StdPeriph_Driver/src/stm32f4xx_gpio.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_gpio.d" -MT"StdPeriph_Driver/src/stm32f4xx_gpio.o" -o "StdPeriph_Driver/src/stm32f4xx_gpio.o" "../StdPeriph_Driver/src/stm32f4xx_gpio.c"
+'Finished building: ../StdPeriph_Driver/src/stm32f4xx_gpio.c'
+' '
+'Building file: ../StdPeriph_Driver/src/tm_stm32f4_i2c.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/tm_stm32f4_i2c.d" -MT"StdPeriph_Driver/src/tm_stm32f4_i2c.o" -o "StdPeriph_Driver/src/tm_stm32f4_i2c.o" "../StdPeriph_Driver/src/tm_stm32f4_i2c.c"
+'Finished building: ../StdPeriph_Driver/src/tm_stm32f4_i2c.c'
+' '
+'Building file: ../StdPeriph_Driver/src/tm_stm32f4_stmpe811.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/tm_stm32f4_stmpe811.d" -MT"StdPeriph_Driver/src/tm_stm32f4_stmpe811.o" -o "StdPeriph_Driver/src/tm_stm32f4_stmpe811.o" "../StdPeriph_Driver/src/tm_stm32f4_stmpe811.c"
+'Finished building: ../StdPeriph_Driver/src/tm_stm32f4_stmpe811.c'
+' '
+'Building target: libstm32f429i-disco_stdperiph_lib.a'
+'Invoking: MCU GCC Archiver'
+arm-none-eabi-ar -r  "libstm32f429i-disco_stdperiph_lib.a" @"objects.list"  
+'Finished building target: libstm32f429i-disco_stdperiph_lib.a'
+' '
+22:37:23 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+'Building target: PracaInz.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaInz\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaInz.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaInz.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaInz.elf" "PracaInz.bin"
+arm-none-eabi-size "PracaInz.elf"
+   text	   data	    bss	    dec	    hex	filename
+  35136	   2224	   5988	  43348	   a954	PracaInz.elf
+' '
+22:37:24 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45552	   2248	  14444	  62244	   f324	PracaINZallinone.elf
+' '
+22:37:25 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+'Building target: GUI_menu.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\StdPeriph_Driver" -T"C:\Users\Seba\Desktop\inz\GUI_menu\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "GUI_menu.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: GUI_menu.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "GUI_menu.elf" "GUI_menu.bin"
+arm-none-eabi-size "GUI_menu.elf"
+   text	   data	    bss	    dec	    hex	filename
+  38908	   2240	   2084	  43232	   a8e0	GUI_menu.elf
+' '
+22:37:32 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.876905
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.510143s (19.122 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47804 bytes in 0.534030s (87.418 KiB/s)
+** Verified OK **
+shutdown command invoked
+22:37:47 **** Erasing chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c init -c "reset halt" -c "flash erase_sector 0 0 last" -c exit 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.874091
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+erased sectors 0 through 23 on flash bank 0 in 36.086063s
+22:38:45 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.875498
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0xfffffffe msp: 0xfffffffc
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0xfffffffc
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.430139s (19.752 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0xfffffffc
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0xfffffffc
+verified 47804 bytes in 0.471027s (99.110 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+22:41:48 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+22:41:48 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+22:41:49 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:175:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:148:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:147:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:897:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:1064:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1151:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1201:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1200:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1199:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1198:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1197:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1229:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45536	   2248	  14444	  62228	   f314	PracaINZallinone.elf
+' '
+22:41:51 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+22:41:57 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.870451
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.457141s (19.535 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47788 bytes in 0.548031s (85.156 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+22:45:45 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+22:45:45 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+22:45:46 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:175:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:148:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:147:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:898:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:1065:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1152:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1202:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1201:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1200:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1199:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1198:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1230:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45520	   2248	  14444	  62212	   f304	PracaINZallinone.elf
+' '
+22:45:48 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+22:45:53 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.870451
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.404138s (19.966 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47772 bytes in 0.462026s (100.973 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+22:47:32 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+22:47:33 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+22:47:33 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:175:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:148:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:147:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:899:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:1066:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1153:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1203:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1202:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1201:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1200:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1199:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1231:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45536	   2248	  14444	  62228	   f314	PracaINZallinone.elf
+' '
+22:47:36 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+22:47:41 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.869046
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.406138s (19.949 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 47788 bytes in 0.478027s (97.626 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+00:09:49 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+00:09:50 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+00:09:50 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:500:27: error: expected expression before 'int'
+      if( (StartPosition + int(5*(Division/SamplingPause)) <= 4096)
+                           ^
+../src/main.c:501:6: error: expected ')' before '{' token
+      {
+      ^
+../src/main.c:505:5: error: expected expression before '}' token
+     }
+     ^
+../src/main.c:511:39: error: expected expression before 'int'
+       StartPosition = StartPosition - int(5*(Division/SamplingPause));
+                                       ^
+../src/main.c:176:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:149:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:148:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:799:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:966:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1051:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1097:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1096:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1095:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1094:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1093:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1125:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+make: *** [src/main.o] Error 1
+00:09:51 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+00:10:27 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+00:10:28 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+00:10:29 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:500:27: error: expected expression before 'int'
+      if( (StartPosition + int(5*(Division/SamplingPause))) <= 4096)
+                           ^
+../src/main.c:502:39: error: expected expression before 'int'
+       StartPosition = StartPosition - int(5*(Division/SamplingPause));
+                                       ^
+../src/main.c:511:39: error: expected expression before 'int'
+       StartPosition = StartPosition - int(5*(Division/SamplingPause));
+                                       ^
+../src/main.c:176:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:149:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:148:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:799:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:966:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1051:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1097:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1096:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1095:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1094:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1093:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1125:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+make: *** [src/main.o] Error 1
+00:10:29 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+00:11:49 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+00:11:49 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+00:11:50 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:176:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:149:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:148:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:799:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:966:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1051:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1097:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1096:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1095:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1094:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1093:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1125:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45752	   2248	  14444	  62444	   f3ec	PracaINZallinone.elf
+' '
+00:11:52 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+00:11:57 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.868772
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.372135s (20.235 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 48004 bytes in 0.463027s (101.244 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+00:21:34 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+00:21:34 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+00:21:35 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:176:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:149:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:148:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:801:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:968:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1053:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1099:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1098:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1097:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1096:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1095:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1127:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45768	   2248	  14444	  62460	   f3fc	PracaINZallinone.elf
+' '
+00:21:37 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+00:21:46 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.868772
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.386137s (20.116 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 48020 bytes in 0.466027s (100.626 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+00:25:33 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+00:25:33 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+00:25:34 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:176:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:149:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:148:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:801:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:968:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1053:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1099:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1098:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1097:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1096:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1095:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1127:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45760	   2248	  14444	  62452	   f3f4	PracaINZallinone.elf
+' '
+00:25:36 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+00:25:42 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.868772
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.421005s (19.826 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 48012 bytes in 0.468001s (100.185 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+00:26:05 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.870176
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.460205s (19.511 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 48012 bytes in 0.514801s (91.077 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+00:37:42 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+00:37:43 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+00:37:43 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:176:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:149:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:148:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:801:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:968:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1053:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1099:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1098:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1097:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1096:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1095:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1127:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45808	   2248	  14444	  62500	   f424	PracaINZallinone.elf
+' '
+00:37:45 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+00:37:51 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.876626
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.388210s (20.099 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 48060 bytes in 0.452400s (103.744 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+20:42:51 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+20:42:53 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+20:42:53 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:176:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:149:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:148:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:817:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:984:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1069:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1115:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1114:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1113:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1112:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1111:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1143:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  45944	   2248	  14444	  62636	   f4ac	PracaINZallinone.elf
+' '
+20:43:01 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+20:43:27 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.872131
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.459140s (19.519 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 48196 bytes in 0.539030s (87.317 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+21:07:37 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+21:07:38 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+21:07:39 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:179:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:152:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:151:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:801:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:968:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1053:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1099:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1098:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1097:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1096:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1095:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1127:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+../src/main.c: In function 'infoPanel5':
+../src/main.c:1224:7: warning: passing argument 1 of 'itoa' makes integer from pointer without a cast
+  itoa(s1,(shift*5*Division1));
+       ^
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:11:0,
+                 from ../src/main.c:11:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:183:8: note: expected 'int' but argument is of type 'char *'
+ char * _EXFUN(itoa,(int, char *, int));
+        ^
+../src/main.c:1224:10: warning: passing argument 2 of 'itoa' makes pointer from integer without a cast
+  itoa(s1,(shift*5*Division1));
+          ^
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:11:0,
+                 from ../src/main.c:11:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:183:8: note: expected 'char *' but argument is of type 'int'
+ char * _EXFUN(itoa,(int, char *, int));
+        ^
+../src/main.c:1224:2: error: too few arguments to function 'itoa'
+  itoa(s1,(shift*5*Division1));
+  ^
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:11:0,
+                 from ../src/main.c:11:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:183:8: note: declared here
+ char * _EXFUN(itoa,(int, char *, int));
+        ^
+make: *** [src/main.o] Error 1
+21:07:39 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+21:07:59 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+21:07:59 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+21:08:00 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:179:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:152:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:151:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:801:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:968:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1053:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1099:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1098:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1097:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1096:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1095:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1127:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+../src/main.c: In function 'infoPanel5':
+../src/main.c:1224:7: warning: passing argument 1 of 'itoa' makes integer from pointer without a cast
+  itoa(s1,(shift*5*Division1),10);
+       ^
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:11:0,
+                 from ../src/main.c:11:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:183:8: note: expected 'int' but argument is of type 'char *'
+ char * _EXFUN(itoa,(int, char *, int));
+        ^
+../src/main.c:1224:10: warning: passing argument 2 of 'itoa' makes pointer from integer without a cast
+  itoa(s1,(shift*5*Division1),10);
+          ^
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:11:0,
+                 from ../src/main.c:11:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:183:8: note: expected 'char *' but argument is of type 'int'
+ char * _EXFUN(itoa,(int, char *, int));
+        ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  46128	   2248	  14444	  62820	   f564	PracaINZallinone.elf
+' '
+21:08:02 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+21:08:08 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.872131
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.380136s (20.167 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 48380 bytes in 0.441026s (107.128 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+21:17:28 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+21:17:29 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+21:17:29 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:180:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:153:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:152:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:802:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:969:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1054:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1100:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1099:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1098:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1097:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1096:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1128:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+../src/main.c: In function 'infoPanel5':
+../src/main.c:1225:7: warning: passing argument 1 of 'itoa' makes integer from pointer without a cast
+  itoa(s1,(shift*5*Division1),10);
+       ^
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:11:0,
+                 from ../src/main.c:11:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:183:8: note: expected 'int' but argument is of type 'char *'
+ char * _EXFUN(itoa,(int, char *, int));
+        ^
+../src/main.c:1225:10: warning: passing argument 2 of 'itoa' makes pointer from integer without a cast
+  itoa(s1,(shift*5*Division1),10);
+          ^
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:11:0,
+                 from ../src/main.c:11:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:183:8: note: expected 'char *' but argument is of type 'int'
+ char * _EXFUN(itoa,(int, char *, int));
+        ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  46168	   2248	  14444	  62860	   f58c	PracaINZallinone.elf
+' '
+21:17:31 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+21:17:38 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.870726
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.403404s (19.972 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 48420 bytes in 0.453401s (104.290 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+21:19:46 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+21:19:46 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+21:19:47 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:180:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:153:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:152:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:802:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:969:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1054:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1100:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1099:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1098:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1097:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1096:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1128:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+../src/main.c: In function 'infoPanel5':
+../src/main.c:1225:7: warning: passing argument 1 of 'itoa' makes integer from pointer without a cast
+  itoa(s1,(shift*5*Division1),10);
+       ^
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:11:0,
+                 from ../src/main.c:11:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:183:8: note: expected 'int' but argument is of type 'char *'
+ char * _EXFUN(itoa,(int, char *, int));
+        ^
+../src/main.c:1225:10: warning: passing argument 2 of 'itoa' makes pointer from integer without a cast
+  itoa(s1,(shift*5*Division1),10);
+          ^
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:11:0,
+                 from ../src/main.c:11:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.3.0.201507241045\tools\compiler\arm-none-eabi\include\stdlib.h:183:8: note: expected 'char *' but argument is of type 'int'
+ char * _EXFUN(itoa,(int, char *, int));
+        ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  46160	   2248	  14444	  62852	   f584	PracaINZallinone.elf
+' '
+21:19:49 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+21:19:54 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.875220
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.372204s (20.234 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 48412 bytes in 0.466203s (101.409 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+21:22:33 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+21:22:34 **** Incremental Build of configuration Debug for project PracaInz ****
+make all 
+make: Nothing to be done for `all'.
+21:22:34 **** Incremental Build of configuration Debug for project PracaINZallinone ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\PracaINZallinone\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/PracaINZallinone/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:34:0: warning: "SET_BIT" redefined
+  #define SET_BIT(k, n)        (k |= (1 << (n)))
+ ^
+In file included from ../src/main.c:14:0:
+C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device/stm32f4xx.h:9121:0: note: this is the location of the previous definition
+ #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+ ^
+../src/main.c: In function 'main':
+../src/main.c:180:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[30];
+       ^
+../src/main.c:153:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0; 
+      ^
+../src/main.c:152:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'DrawGUIBackground':
+../src/main.c:802:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+../src/main.c: In function 'StartMenu':
+../src/main.c:969:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel2':
+../src/main.c:1054:7: warning: unused variable 's' [-Wunused-variable]
+  char s[5];
+       ^
+../src/main.c: In function 'infoPanel3':
+../src/main.c:1100:12: warning: unused variable 'y1' [-Wunused-variable]
+  short int y1 = 50;
+            ^
+../src/main.c:1099:12: warning: unused variable 'x1' [-Wunused-variable]
+  short int x1 = 20;
+            ^
+../src/main.c:1098:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+../src/main.c:1097:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+../src/main.c:1096:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+../src/main.c: In function 'generateDivision':
+../src/main.c:1128:6: warning: unused variable 'temp' [-Wunused-variable]
+  int temp; //tymczasowa zamiana na inne jednostki czasu z divisions[i]
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PracaINZallinone.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\Users\Seba\Desktop\inz\stm32f429i-disco_stdperiph_lib\Debug" -T"C:\Users\Seba\Desktop\inz\PracaINZallinone\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "PracaINZallinone.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: PracaINZallinone.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "PracaINZallinone.elf" "PracaINZallinone.bin"
+arm-none-eabi-size "PracaINZallinone.elf"
+   text	   data	    bss	    dec	    hex	filename
+  46160	   2248	  14444	  62852	   f584	PracaINZallinone.elf
+' '
+21:22:36 **** Incremental Build of configuration Debug for project GUI_menu ****
+make all 
+make: Nothing to be done for `all'.
+21:22:42 **** Programing project PracaINZallinone on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/PracaINZallinone.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.875220
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000af0 msp: 0x20030000
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0x20030000
+wrote 49152 bytes from file Debug/PracaINZallinone.elf in 2.395649s (20.036 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20030000
+verified 48412 bytes in 0.453418s (104.269 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked

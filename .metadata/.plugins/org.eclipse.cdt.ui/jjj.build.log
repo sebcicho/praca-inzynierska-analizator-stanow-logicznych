@@ -1,0 +1,80 @@
+17:18:35 **** Build of configuration Debug for project jjj ****
+make all 
+'Building file: ../startup/startup_stm32f429_439xx.S'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\jjj\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/jjj/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/startup_stm32f429_439xx.d" -MT"startup/startup_stm32f429_439xx.o" -o "startup/startup_stm32f429_439xx.o" "../startup/startup_stm32f429_439xx.S"
+'Finished building: ../startup/startup_stm32f429_439xx.S'
+' '
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\jjj\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/jjj/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:83:6: warning: unused variable 'i' [-Wunused-variable]
+  int i =  0;
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\jjj\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/jjj/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/system_stm32f4xx.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\jjj\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib" -I"C:/Users/Seba/Desktop/inz/jjj/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"C:/Users/Seba/Desktop/inz/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/system_stm32f4xx.d" -MT"src/system_stm32f4xx.o" -o "src/system_stm32f4xx.o" "../src/system_stm32f4xx.c"
+'Finished building: ../src/system_stm32f4xx.c'
+' '
+'Building target: jjj.elf'
+'Invoking: MCU G++ Linker'
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\Seba\Desktop\inz\jjj\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -fno-exceptions -fno-rtti -lm -o "jjj.elf" @"objects.list"  
+src/main.o: In function `main':
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:62: undefined reference to `RCC_AHB1PeriphClockCmd'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:63: undefined reference to `RCC_APB1PeriphClockCmd'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:77: undefined reference to `TM_DMA2DGRAPHIC_DrawPolyLine'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:80: undefined reference to `TM_ILI9341_Layer1To2'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:92: undefined reference to `TM_DMA2DGRAPHIC_Fill'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:93: undefined reference to `TM_DMA2DGRAPHIC_DrawPolyLine'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:101: undefined reference to `TM_DMA2DGRAPHIC_Fill'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:102: undefined reference to `TM_DMA2DGRAPHIC_DrawPolyLine'
+src/main.o: In function `RCC_Configuration':
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:115: undefined reference to `RCC_DeInit'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:118: undefined reference to `RCC_HSEConfig'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:121: undefined reference to `RCC_WaitForHSEStartUp'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:126: undefined reference to `RCC_PLLConfig'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:128: undefined reference to `RCC_PLLCmd'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:130: undefined reference to `RCC_GetFlagStatus'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:133: undefined reference to `FLASH_SetLatency'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:141: undefined reference to `RCC_HCLKConfig'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:142: undefined reference to `RCC_PCLK1Config'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:143: undefined reference to `RCC_PCLK1Config'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:146: undefined reference to `RCC_SYSCLKConfig'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:148: undefined reference to `FLASH_SetLatency'
+src/main.o: In function `NVIC_Configuration':
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:164: undefined reference to `NVIC_Init'
+src/main.o: In function `GPIO_Configuration':
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:174: undefined reference to `GPIO_Init'
+src/main.o: In function `TIM_Configuration':
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:184: undefined reference to `TIM_TimeBaseInit'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:186: undefined reference to `TIM_ITConfig'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:188: undefined reference to `TIM_Cmd'
+src/main.o: In function `TIM2_IRQHandler':
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:193: undefined reference to `TIM_GetITStatus'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:195: undefined reference to `TIM_ClearITPendingBit'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:196: undefined reference to `GPIO_ToggleBits'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:197: undefined reference to `GPIO_ToggleBits'
+src/main.o: In function `DMA2D_Configuration':
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:207: undefined reference to `TM_DELAY_Init'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:211: undefined reference to `TM_ILI9341_Init'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:213: undefined reference to `TM_DMA2DGRAPHIC_Init'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:216: undefined reference to `TM_ILI9341_Rotate'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:218: undefined reference to `TM_DMA2DGRAPHIC_SetOrientation'
+C:\Users\Seba\Desktop\inz\jjj\Debug/../src/main.c:220: undefined reference to `TM_DMA2DGRAPHIC_Fill'
+collect2.exe: error: ld returned 1 exit status
+make: *** [jjj.elf] Error 1
+
+17:18:38 Build Finished (took 2s.989ms)
+

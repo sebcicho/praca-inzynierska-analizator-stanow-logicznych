@@ -1,0 +1,45 @@
+20:21:02 **** Programing project praca_inz on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.3.0.201507241045\\tools\\openocd\\bin\\openocd.exe" -f stm32f429i_disco.cfg -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts\\st_board" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_1.3.0.201507241045\\resources\\openocd\\scripts" -c "program Debug/praca_inz.elf verify reset exit" 
+Open On-Chip Debugger 0.9.0-dev-00415-g2d4ae3f-dirty (2015-06-12-17:54)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 2000 kHz
+adapter_nsrst_delay: 100
+none separate
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : Unable to match requested speed 2000 kHz, using 1800 kHz
+Info : clock speed 1800 kHz
+Info : STLINK v2 JTAG v17 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.897578
+Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0xfffffffe msp: 0xfffffffc
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10036419
+Info : flash size = 2048kbytes
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x20000042 msp: 0xfffffffc
+wrote 32768 bytes from file Debug/praca_inz.elf in 1.807103s (17.708 KiB/s)
+** Programming Finished **
+** Verify Started **
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0xfffffffc
+target state: halted
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0xfffffffc
+verified 32528 bytes in 0.543031s (58.497 KiB/s)
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+
+20:21:05 Build Finished (took 3s.173ms)
+

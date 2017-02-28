@@ -1,0 +1,20 @@
+01:42:27 **** Build of configuration Debug for project tescior ****
+make all 
+'Building file: ../startup/startup_stm32f429_439xx.S'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\tescior\Debug
+arm-none-eabi-gcc -mthumb -mfloat-abi=soft -O0 -g -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/startup_stm32f429_439xx.d" -MT"startup/startup_stm32f429_439xx.o" -o "startup/startup_stm32f429_439xx.o" "../startup/startup_stm32f429_439xx.S"
+'Finished building: ../startup/startup_stm32f429_439xx.S'
+' '
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+C:\Users\Seba\Desktop\inz\tescior\Debug
+arm-none-eabi-gcc -mthumb -mfloat-abi=soft -O0 -g -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:12:23: fatal error: stm32f4xx.h: No such file or directory
+ #include "stm32f4xx.h"
+                       ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+
+01:42:28 Build Finished (took 807ms)
+
